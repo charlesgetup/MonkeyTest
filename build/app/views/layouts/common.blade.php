@@ -32,13 +32,17 @@
     
         @yield('head-append')
     </head>
-    <body class="{{ preg_replace('/\s{2,}/', ' ', trim($__env->yieldContent('body-class'))) }}">
+    <body class="{{ preg_replace('/\s{2,}/', ' ', trim($__env->yieldContent('body-class'))) }}" style="padding:30px;">
         <!--[if lt IE 7]>
             <p class="browsehappy">You are using an <strong>outdated</strong> browser. Please <a href="http://browsehappy.com/">upgrade your browser</a> to improve your experience.</p>
         <![endif]-->
 
         {{-- Global navigation --}}
         @include('partials.nav')
+
+	@if (Session::has('message'))
+		<p style="color: green;">{{Session::get('message')}}</p>
+	@endif
 
         @yield('body')
 

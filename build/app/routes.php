@@ -11,15 +11,9 @@
 |
 */
 
-Route::get('/', function()
-{
-	return View::make('hello');
-});
+Route::get('/', array('as' => 'hello', 'uses' => 'HomeController@showWelcome'));
 
-Route::post('/', function()
-{
-        return View::make('hello');
-});
+Route::post('/', array('as' => 'createEnquiry', 'uses' => 'HomeController@showWelcome'));
 
 // These routes will be cached, if you configure a non-zero bladeCacheExpiry.
 // Full documentation at https://github.com/TheMonkeys/laravel-blade-cache-filter
