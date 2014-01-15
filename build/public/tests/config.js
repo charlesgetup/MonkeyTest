@@ -20,14 +20,16 @@
         "testsDir": "mytests",
         "globalTests": [
             "global/not_server_error.js",
-            "global/is_html_w3c_valid.js",
-            "global/has_utf8_metatag.js",
-            "global/has_google_analytics.js"
+            "global/is_html_w3c_valid.js", // The first task is done by this global test, so I just ignore it. I have implemented the following two tests below
+            "global/has_utf8_metatag.js"
+
+	    // Comment the following test, because I don't add a valid GA id. This is not required in the test
+            /*"global/has_google_analytics.js"*/
         ],
         "pages": [
             {
                 "url": "/",
-                "tests": [ "page/demo_page_test.js","page/has_facebook_appid.js" ]
+                "tests": [ "enquiry/require_fields_test.js","enquiry/product_complaint_test.js" ]
             }
         ],
         "proxyUrl": "core/proxy.php?mode=native&url=<%= url %>",
