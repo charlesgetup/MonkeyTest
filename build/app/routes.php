@@ -16,6 +16,11 @@ Route::get('/', function()
 	return View::make('hello');
 });
 
+Route::post('/', function()
+{
+        return View::make('hello');
+});
+
 // These routes will be cached, if you configure a non-zero bladeCacheExpiry.
 // Full documentation at https://github.com/TheMonkeys/laravel-blade-cache-filter
 Route::group(array('before' => 'cache', 'after' => 'cache'), function() {
