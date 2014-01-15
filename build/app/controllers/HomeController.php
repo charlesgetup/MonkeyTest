@@ -20,7 +20,7 @@ class HomeController extends BaseController {
 
 		// The following data can be retrieved from DB tables
 		$states = array(
-			'' 	=> '', 
+			''	=> ' ',
 			'ACT' 	=> 'ACT', 
 			'NSW' 	=> 'NSW', 
 			'NT' 	=> 'NT', 
@@ -31,7 +31,7 @@ class HomeController extends BaseController {
 			'WA' 	=> 'WA'
 		);
 		$enquiryTypes = array(
-			'' 				=> '', 
+			''				=> ' ',
 			'General enquiry' 		=> 'general enquiry',
 			'Product feedback or enquiry' 	=> 'Product feedback or enquiry',
 			'Product complaint' 		=> 'Product complaint'

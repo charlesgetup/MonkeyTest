@@ -26,14 +26,7 @@
         ],
         "pages": [
             {
-                "url": "../"
-            },
-            {
-                "url": "core/demo/index.html",
-                "tests": [ "page/has_facebook_appid.js" ]
-            },
-            {
-                "url": "core/demo/index.html?pretendIsAnotherPage=true",
+                "url": "/",
                 "tests": [ "page/demo_page_test.js","page/has_facebook_appid.js" ]
             }
         ],

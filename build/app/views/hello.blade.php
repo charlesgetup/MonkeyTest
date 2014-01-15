@@ -73,7 +73,7 @@
                 {{Form::label('enquiry', 'Enquiry')}} <br />
                 {{Form::textarea('enquiry', Input::old('enquiry'))}}
         </p>	
-	</p>
+	<p>
 		{{Form::submit('Submit Enquiry')}}	
 	</p>
 
